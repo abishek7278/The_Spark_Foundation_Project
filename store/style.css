@@ -1,0 +1,50 @@
+{% load static %}
+.customers{
+    padding: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    font-family: cursive;
+    font-style: oblique;
+}
+#body-edit{
+    padding: 100px 100px 100px 100px;
+}
+.jumbotron-fluid{
+        text-align: center;
+}
+.body-custom{
+    padding: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    font-family: cursive;
+    font-style: oblique;
+}
+.body-trans{
+    padding: 100px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-align: justify;
+    font-family: cursive;
+    font-style: oblique;
+}
+.trans-edit{
+        text-align: center;
+}
+.table1 {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+.table-dark{
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+.capt-side{
+    caption-side: top;
+    text-align: center;
+    background: black;
+    color:white;
+}

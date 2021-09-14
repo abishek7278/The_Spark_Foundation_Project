@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Customers</title>
+	<meta name="viewport" content="width=device-width, intial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<strong><a class="navbar-brand" href="#">Basic Banking System</a></strong>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ">
+				<li class="nav-item ">
+					<a class="nav-link" href="home"><i>Home</i></a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="customers"><i>Customers</i></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="transfer"><i>Transfer Money</i></a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="transaction"><i>Transactions</i></a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="https://abishek7278.dorik.io/"><i>Contact Me</i></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<section class="body-custom" style="background: url({% static 'images/customers_1.png'%});">
+		<b><div class=" container top-left">SIMPLE LIFE WITH EASY TRANSACTIONS.</div></b>
+	</section>
+	<section>
+		<table class="table">
+			<caption class="capt-side">Customers Detail</caption>
+			<thead class="table-dark">
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Acc. Bal</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in customers %}
+				<tr>
+					<td>{{i.name}}</td>
+					<td>{{i.email}}</td>
+					<td>₹ {{i.balance}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+
+		</table>
+	</section>
+</body>
+</html>
